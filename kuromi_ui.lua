@@ -277,7 +277,7 @@ if game.PlaceId == 8447279898 then
     placeSectionM:NewButton("Tons of Money!", "You will get caught.", function()
         while game.Players.LocalPlayer.leaderstats.Money.Value < 17100000000 do
             getsenv(game.Players.LocalPlayer.PlayerScripts.cashTreasureChest).claimReward()
-            wait()
+            wait(.15)
         end
     end)
     
