@@ -6,18 +6,6 @@ local mainTab = Window:NewTab("Main")
 local generalSection = mainTab:NewSection("General")
 
 
-generalSection:NewToggle("Fly", "fly", function(state)
-    if state then
-        _G.swimfly = true
-        while wait() and _G.swimfly == true do
-            game.Players.LocalPlayer.Character.Humanoid:ChangeState(4)
-        end
-    else
-        _G.swimfly = false
-    end
-end)
-
-
 generalSection:NewToggle("Spam Parts", "spam lol", function(state)
     if state then
         _G.spamparts = true
@@ -118,6 +106,18 @@ end)
 playerSection:NewSlider("JumpPower", "Changes your JumpPower", 1000, 0, function(s) -- 1000 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+
+playerSection:NewToggle("Fly", "universial fly script by nodemixaholic", function(state)
+    if state then
+        _G.swimfly = true
+        while wait() and _G.swimfly == true do
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(4)
+        end
+    else
+        _G.swimfly = false
+    end
+end)
+
 
 playerSection:NewButton("BTOOLS", "build client-sided", function()
     localplayer = game.Players.LocalPlayer
