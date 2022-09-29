@@ -21,20 +21,20 @@ end)
 generalSection:NewToggle("Spam Parts", "spam lol", function(state)
     if state then
         _G.spamparts = true
-        while wait(.1) and _G.spamparts == true do
+        while wait(.3) and _G.spamparts == true do
         pos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
         for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
         if a:IsA("Tool") then
-        wait(.1)
+        wait(.3)
         a.CanBeDropped = true
         game.Players.LocalPlayer.Character.Humanoid:EquipTool(a)
-        a.Handle.Mesh:Destroy()
         a.Parent = game.Workspace
         end
         end
+        game.Players.LocalPlayer.Character:MoveTo(pos + Vector3.new(1,2,3));
         game.Players.LocalPlayer.Character.Humanoid.Health = 0
         wait(6)
-        game.Players.LocalPlayer.Character:MoveTo(pos);
+        game.Players.LocalPlayer.Character:MoveTo(pos + Vector3.new(1,2,3));
         end
     else
         _G.spamparts = false
