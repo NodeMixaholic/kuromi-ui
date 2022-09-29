@@ -272,7 +272,7 @@ end)
 --Printer game
 if game.PlaceId == 8447279898 then
     local placeTab = Window:NewTab("Useless Printer Game")
-    local placeSectionM = Tab:NewSection("You will likely get caught.")
+    local placeSectionM = placeTab:NewSection("You will likely get caught.")
 
     placeSectionM:NewButton("Money!", "You will get caught.", function()
         game:GetService("ReplicatedStorage").treasureChestCollection:FireServer(17100000000);
