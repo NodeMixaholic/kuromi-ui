@@ -3,7 +3,7 @@ local Window = Library.CreateLib("KuromiUI - by NodeMixaholic.", "DarkTheme")
 
 --Main
 local mainTab = Window:NewTab("Main")
-local generalSection = Tab:NewSection("General")
+local generalSection = mainTab:NewSection("General")
 
 
 generalSection:NewToggle("Fly", "fly", function(state)
@@ -106,18 +106,10 @@ generalSection:NewButton("Server Shutdown", "turn your volume down! <3", functio
 end)
 
 
---Printer game
-if game.PlaceId == 8447279898 then
-    local placeTab = Window:NewTab("Useless Printer Game")
-    local placeSectionM = Tab:NewSection("You will likely get caught.")
 
-    placeSectionM:NewButton("Money!", "You will get caught.", function()
-        game:GetService("ReplicatedStorage").treasureChestCollection:FireServer(17100000000);
-    end)
-end
-
+--Player section
 local playerTab = Window:NewTab("LocalPlayer")
-local playerSection = Tab:NewSection("Player")
+local playerSection = playerTab:NewSection("Player")
 
 playerSection:NewSlider("WalkSpeed", "Changes your WalkSpeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
@@ -177,6 +169,7 @@ playerSection:NewToggle("Infinite OOF", "to infinity and beyond!", function(stat
 
 while task.wait(1/_G.speed) do
    Humanoid:ChangeState(Enum.HumanoidStateType.Dead)
+   end
     else
         _G.infoof = false
     end
@@ -275,3 +268,13 @@ playerSection:NewButton("Zombify Me", "R6 required. By NodeMixaholic.", function
     k:Play(0)
     k:AdjustSpeed(1)
 end)
+
+--Printer game
+if game.PlaceId == 8447279898 then
+    local placeTab = Window:NewTab("Useless Printer Game")
+    local placeSectionM = Tab:NewSection("You will likely get caught.")
+
+    placeSectionM:NewButton("Money!", "You will get caught.", function()
+        game:GetService("ReplicatedStorage").treasureChestCollection:FireServer(17100000000);
+    end)
+end
