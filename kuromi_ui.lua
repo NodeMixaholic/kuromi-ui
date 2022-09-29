@@ -274,10 +274,14 @@ if game.PlaceId == 8447279898 then
     local placeTab = Window:NewTab("Useless Printer Game")
     local placeSectionM = placeTab:NewSection("You will likely get caught.")
 
-    placeSectionM:NewButton("Money!", "You will get caught.", function()
+    placeSectionM:NewButton("Tons of Money!", "You will get caught.", function()
         while game.Players.LocalPlayer.leaderstats.Money.Value < 17100000000 do
             getsenv(game.Players.LocalPlayer.PlayerScripts.cashTreasureChest).claimReward()
             wait()
         end
+    end)
+    
+    placeSectionM:NewButton("More Money!", "You may caught.", function()
+        getsenv(game.Players.LocalPlayer.PlayerScripts.cashTreasureChest).claimReward()
     end)
 end
