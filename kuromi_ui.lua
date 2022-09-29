@@ -83,7 +83,7 @@ generalSection:NewButton("Ear Rape", "turn your volume down! <3", function()
      end
 end)
 
-generalSection:NewButton("Server Shutdown", "turn your volume down! <3", function()
+generalSection:NewButton("Server Shutdown", "turn your volume down! <3. makes server useless.", function()
     while wait() do
         for _, sound in next, workspace:GetDescendants() do
             if sound:IsA("Sound") then
