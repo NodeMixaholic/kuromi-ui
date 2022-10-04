@@ -83,13 +83,16 @@ generalSection:NewButton("Ear Rape", "turn your volume down! <3", function()
      end
 end)
 
-generalSection:NewButton("Server Shutdown", "turn your volume down! <3. makes server useless.", function()
+generalSection:NewButton("Server Shutdown", "Shuts down server", function()
     while wait() do
-        for _, sound in next, workspace:GetDescendants() do
-            if sound:IsA("Sound") then
-                sound:Play()
-            end
-         end
+        game.Players.LocalPlayer:LoadCharacter()
+        game.Players.LocalPlayer:LoadCharacter()
+        game.Players.LocalPlayer:LoadCharacter()
+        game.Players.LocalPlayer:LoadCharacter()
+        game.Players.LocalPlayer:LoadCharacter()
+        game.Players.LocalPlayer:LoadCharacter()
+        game.Players.LocalPlayer:LoadCharacter()
+        game.Players.LocalPlayer:LoadCharacter()
     end
 end)
 
